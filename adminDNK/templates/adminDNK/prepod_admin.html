@@ -1,0 +1,17 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}Преподаватели{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Преподаватели</h1>
+        {% for el in prepod %}
+            <div class="alert alert-warning">
+                <h3>{{ el.familiya }} {{ el.imya }} {{ el.imya }} {{ el.otchestvo }}</h3>
+                <p>{{ el.elektronnaya_pochta }}</p>
+                <p>{{ el.nomer_telefona }}</p>
+                <a href="{% url 'prepod-detail' pk=el.id %}" class="btn btn-warning">Изменить или удалить</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}{{ prog.nazvanie_programmy }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ prog.razdel }}</h1>
+        <p>{{ prog.nazvanie_programmy }}</p>
+        <p>{{ prog.opisanie }}</p>
+        <a href="{% url 'prog-izmen' prog.id %}" class="btn btn-warning">Изменить</a>
+        <a href="{% url 'prog-delete' prog.id %}" class="btn btn-danger">Удалить</a>
+    </div>
+{% endblock %}

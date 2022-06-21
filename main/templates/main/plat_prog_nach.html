@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Для начальной школы{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Для начальной школы</h1>
+        <ul>
+            <a href="{% url 'plat_prog' %}"><il>Программы</il></a>
+            <a href="{% url 'plat_mer' %}"><il>Мероприятия выходного дня</il></a>
+            <a href="{% url 'plat_fab' %}"><il>Фабрика-лаборатория</il></a>
+            <a href="{% url 'plat_eks' %}"><il>Экскурсии и мастер классы</il></a>
+        </ul><br>
+        <ul>
+            <a href="{% url 'plat_prog_nach' %}"><il>Для начальной школы</il></a>
+            <a href="{% url 'plat_prog_dosh' %}"><il>Для дошкольников</il></a>
+        </ul>
+        <p>Здесь будет список программ "Для начальной школы"</p>
+    </div>
+{% endblock %}

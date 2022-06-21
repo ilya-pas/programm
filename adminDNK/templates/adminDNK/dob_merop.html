@@ -1,0 +1,20 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}Добавление мероприятия{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Добавление мероприятия</h1>
+        <form method="post">
+            {% csrf_token %}
+
+            {{ form.id_centra }}<br>
+            {{ form.vid }}<br>
+            {{ form.nazvanie_meropriyatya }}<br>
+            {{ form.opisanie_meropriyatya }}<br>
+            {{ form.plan }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Добавить мероприятие</button>
+        </form>
+    </div>
+{% endblock %}

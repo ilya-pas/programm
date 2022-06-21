@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Авторизация{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Авторизация</h1><br>
+        <form class="avto">
+            <h4>Введите свой логин:</h4>
+            <input type="text" id="log" placeholder="Логин...">
+            <h4>Введите свой пароль:</h4>
+            <input type="text"  id="pas" placeholder="Пароль...">
+            <button type="button" id="avto">Войти</button>
+        </form>
+        <a href="{% url 'obuch_home' %}"><il>Перейти за авторизированого пользователя (Обучающегося)</il></a><br>
+        <a href=""><il>Перейти за авторизированого пользователя (Преподователь)</il></a><br>
+        <a href="{% url 'home_admin' %}"><il>Перейти за авторизированого пользователя (Администратор ДНК)</il></a><br>
+        <h1>ДОРАБОТАТЬ АТОРИЗАЦИЮ ПОЛЬЗОВАТЕЛЯ!!!</h1>
+    </div>
+    <script src="/static/main/js/avto.js"></script>
+{% endblock %}

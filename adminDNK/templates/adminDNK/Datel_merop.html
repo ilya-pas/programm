@@ -1,0 +1,14 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}{{ merpo.nazvanie_meropriyatya }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ merop.vid }}</h1>
+        <p>{{ merop.nazvanie_meropriyatya }}</p>
+        <p>{{ merop.opisanie_meropriyatya }}</p>
+        <p>{{ merop.plan }}</p>
+        <a href="{% url 'merop-izmen' merop.id %}" class="btn btn-warning">Изменить</a>
+        <a href="{% url 'merop-delete' merop.id %}" class="btn btn-danger">Удалить</a>
+    </div>
+{% endblock %}

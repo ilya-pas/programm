@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Не конкурсные{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Не конкурсные</h1>
+        <ul>
+            <a href="{% url 'merop_kon' %}"><il>Конкурсные</il></a>
+            <a href="{% url 'merop_ne_kon' %}"><il>Не конкурсные</il></a>
+        </ul>
+        <p>Здесь будет список мероприятий "Не конкурсные"</p>
+    </div>
+{% endblock %}

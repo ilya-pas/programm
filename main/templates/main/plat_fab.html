@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Фабрика-лаборатория{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Фабрика-лаборатория</h1>
+        <ul>
+            <a href="{% url 'plat_prog' %}"><il>Программы</il></a>
+            <a href="{% url 'plat_mer' %}"><il>Мероприятия выходного дня</il></a>
+            <a href="{% url 'plat_fab' %}"><il>Фабрика-лаборатория</il></a>
+            <a href="{% url 'plat_eks' %}"><il>Экскурсии и мастер классы</il></a>
+        </ul>
+        <p>Здесь будет Описание и Расписание "Фабрика-лаборатория"</p>
+    </div>
+{% endblock %}

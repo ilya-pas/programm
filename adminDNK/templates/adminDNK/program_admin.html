@@ -1,0 +1,14 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}Программы{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Программы</h1>
+        <ul>
+            <a href="{% url 'program_det_admin' %}"><il>Детский университет</il></a>
+            <a href="{% url 'program_mal_admin' %}"><il>Малая академия</il></a>
+            <a href="{% url 'program_set_admin' %}"><il>Сетевые уроки</il></a>
+        </ul>
+    </div>
+{% endblock %}

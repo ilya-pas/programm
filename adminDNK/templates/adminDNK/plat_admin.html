@@ -1,0 +1,15 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}Платные услуги{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Платные услуги</h1>
+        <ul>
+            <a href="{% url 'plat_prog_admin' %}"><il>Программы</il></a>
+            <a href="{% url 'plat_mer_admin' %}"><il>Мероприятия выходного дня</il></a>
+            <a href="{% url 'plat_fab_admin' %}"><il>Фабрика-лаборатория</il></a>
+            <a href="{% url 'plat_eks_admin' %}"><il>Экскурсии и мастер классы</il></a>
+        </ul>
+    </div>
+{% endblock %}

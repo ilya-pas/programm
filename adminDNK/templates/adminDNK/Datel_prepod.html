@@ -1,0 +1,15 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}{{ prepod.familiya }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ prepod.familiya }} {{ prepod.imya }} {{ prepod.otchestvo }}</h1>
+        <p>{{ prepod.imya }}</p>
+        <p>{{ prepod.otchestvo }}</p>
+        <p>{{ prepod.elektronnaya_pochta }}</p>
+        <p>{{ prepod.nomer_telefona }}</p>
+        <a href="{% url 'prog-izmen' prog.id %}" class="btn btn-warning">Изменить</a>
+        <a href="{% url 'prog-delete' prog.id %}" class="btn btn-danger">Удалить</a>
+    </div>
+{% endblock %}

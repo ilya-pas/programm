@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Мероприятия{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Мероприятия</h1>
+        <ul>
+            <a href="{% url 'merop_kon' %}"><il>Конкурсные</il></a>
+            <a href="{% url 'merop_ne_kon' %}"><il>Не конкурсные</il></a>
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}{{ plat.nazvanie_uslugi }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ plat.razdel }}</h1>
+        <p>{{ plat.nazvanie_uslugi }}</p>
+        <p>{{ plat.opisanie_uslugi }}</p>
+        <a href="{% url 'plat-izmen' plat.id %}" class="btn btn-warning">Изменить</a>
+        <a href="{% url 'plat-delete' plat.id %}" class="btn btn-danger">Удалить</a>
+    </div>
+{% endblock %}

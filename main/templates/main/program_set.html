@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Сетевые уроки{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Сетевые уроки</h1>
+        <ul>
+            <a href="{% url 'program_det' %}"><il>Детский университет</il></a>
+            <a href="{% url 'program_mal' %}"><il>Малая академия</il></a>
+            <a href="{% url 'program_set' %}"><il>Сетевые уроки</il></a>
+        </ul>
+        <p>Здесь будет список программ "Сетевые уроки"</p>
+    </div>
+{% endblock %}

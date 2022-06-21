@@ -1,0 +1,19 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}Программы{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Программы</h1>
+        <ul>
+            <a href="{% url 'plat_prog_admin' %}"><il>Программы</il></a>
+            <a href="{% url 'plat_mer_admin' %}"><il>Мероприятия выходного дня</il></a>
+            <a href="{% url 'plat_fab_admin' %}"><il>Фабрика-лаборатория</il></a>
+            <a href="{% url 'plat_eks_admin' %}"><il>Экскурсии и мастер классы</il></a>
+        </ul><br>
+        <ul>
+            <a href="{% url 'plat_prog_nach_admin' %}"><il>Для начальной школы</il></a>
+            <a href="{% url 'plat_prog_dosh_admin' %}"><il>Для дошкольников</il></a>
+        </ul>
+    </div>
+{% endblock %}

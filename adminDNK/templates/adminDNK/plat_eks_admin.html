@@ -1,0 +1,25 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}Экскурсии и мастер классы{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Экскурсии и мастер классы</h1>
+        <ul>
+            <a href="{% url 'plat_prog_admin' %}"><il>Программы</il></a>
+            <a href="{% url 'plat_mer_admin' %}"><il>Мероприятия выходного дня</il></a>
+            <a href="{% url 'plat_fab_admin' %}"><il>Фабрика-лаборатория</il></a>
+            <a href="{% url 'plat_eks_admin' %}"><il>Экскурсии и мастер классы</il></a>
+        </ul>
+        {% for el in plat %}
+            <div class="alert alert-warning">
+                {% if el.razdel == "Экскурсии и мастер классы" %}
+                    <h3>{{ el.razdel }}</h3>
+                    <p>{{ el.nazvanie_uslugi }}</p>
+                    <p>{{ el.opisanie_uslugi }}</p>
+                    <a href="{% url 'plat-detaili' pk=el.id %}" class="btn btn-warning">Изменить или удалить</a>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

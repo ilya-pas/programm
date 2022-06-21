@@ -1,0 +1,24 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}Не конкурсные{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Не конкурсные</h1>
+        <ul>
+            <a href="{% url 'merop_kon_admin' %}"><il>Конкурсные</il></a>
+            <a href="{% url 'merop_ne_kon_admin' %}"><il>Не конкурсные</il></a>
+        </ul>
+        {% for el in merop %}
+            <div class="alert alert-warning">
+                {% if el.vid == "Не конкурсный" %}
+                    <h3>{{ el.vid }}</h3>
+                    <p>{{ el.nazvanie_meropriyatya }}</p>
+                    <p>{{ el.opisanie_meropriyatya }}</p>
+                    <p>{{ el.plan }}</p>
+                    <a href="{% url 'merop-detail' el.id %}" class="btn btn-warning">Изменить или удалить</a>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

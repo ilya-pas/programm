@@ -1,0 +1,23 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}Детский университет{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Детский университет</h1>
+        <ul>
+            <a href="{% url 'program_det_admin' %}"><il>Детский университет</il></a>
+            <a href="{% url 'program_mal_admin' %}"><il>Малая академия</il></a>
+            <a href="{% url 'program_set_admin' %}"><il>Сетевые уроки</il></a>
+        </ul>
+        {% for el in prog %}
+            <div class="alert alert-warning">
+                {% if el.razdel == "Детский университет" %}
+                    <h3>{{ el.nazvanie_programmy }}</h3>
+                    <p>{{ el.opisanie }}</p>
+                    <a href="{% url 'news-detail' el.id %}" class="btn btn-warning">Изменить или удалить</a>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

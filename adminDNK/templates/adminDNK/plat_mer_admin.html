@@ -1,0 +1,24 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}Мероприятия выходного дня{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Мероприятия выходного дня</h1>
+        <ul>
+            <a href="{% url 'plat_prog_admin' %}"><il>Программы</il></a>
+            <a href="{% url 'plat_mer_admin' %}"><il>Мероприятия выходного дня</il></a>
+            <a href="{% url 'plat_fab_admin' %}"><il>Фабрика-лаборатория</il></a>
+            <a href="{% url 'plat_eks_admin' %}"><il>Экскурсии и мастер классы</il></a>
+        </ul>
+        {% for el in plat %}
+            <div class="alert alert-warning">
+
+                <h3>{{ el.nazvanie_uslugi }}</h3>
+                <p>{{ el.opisanie_uslugi }}</p>
+                <a href="{% url 'plat-detaili' el.id %}" class="btn btn-warning">Изменить или удалить</a>
+
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

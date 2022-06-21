@@ -1,0 +1,13 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}Мероприятия{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Мероприятия</h1>
+        <ul>
+            <a href="{% url 'merop_kon_admin' %}"><il>Конкурсные</il></a>
+            <a href="{% url 'merop_ne_kon_admin' %}"><il>Не конкурсные</il></a>
+        </ul>
+    </div>
+{% endblock %}

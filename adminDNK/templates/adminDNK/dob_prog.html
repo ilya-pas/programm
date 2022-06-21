@@ -1,0 +1,19 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}Добавление программы{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Добавление программы</h1>
+        <form method="post">
+            {% csrf_token %}
+
+            {{ form.id_prepod }}<br>
+            {{ form.razdel }}<br>
+            {{ form.nazvanie_programmy }}<br>
+            {{ form.opisanie }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Добавить программу</button>
+        </form>
+    </div>
+{% endblock %}

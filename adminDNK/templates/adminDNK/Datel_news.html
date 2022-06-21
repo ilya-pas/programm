@@ -1,0 +1,13 @@
+{% extends 'adminDNK/home_admin.html' %}
+
+{% block title %}{{ news.nazvanie_news }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ news.nazvanie_news }}</h1>
+        <p>{{ news.date }}</p>
+        <p>{{ news.news }}</p>
+        <a href="{% url 'news-izmen' news.id %}" class="btn btn-warning">Изменить</a>
+        <a href="{% url 'news-delete' news.id %}" class="btn btn-danger">Удалить</a>
+    </div>
+{% endblock %}
