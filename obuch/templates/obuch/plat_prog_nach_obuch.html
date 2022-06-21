@@ -1,0 +1,20 @@
+{% extends 'obuch/obuch_home.html' %}
+
+{% block title %}Для начальной школы{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Для начальной школы</h1>
+        <ul>
+            <a href="{% url 'plat_prog_obuch' %}"><il>Программы</il></a>
+            <a href="{% url 'plat_mer_obuch' %}"><il>Мероприятия выходного дня</il></a>
+            <a href="{% url 'plat_fab_obuch' %}"><il>Фабрика-лаборатория</il></a>
+            <a href="{% url 'plat_eks_obuch' %}"><il>Экскурсии и мастер классы</il></a>
+        </ul><br>
+        <ul>
+            <a href="{% url 'plat_prog_nach_obuch' %}"><il>Для начальной школы</il></a>
+            <a href="{% url 'plat_prog_dosh_obuch' %}"><il>Для дошкольников</il></a>
+        </ul>
+        <p>Здесь будет список программ "Для начальной школы"</p>
+    </div>
+{% endblock %}

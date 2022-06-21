@@ -1,0 +1,14 @@
+{% extends 'obuch/obuch_home.html' %}
+
+{% block title %}Конкурсные{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Конкурсные</h1>
+        <ul>
+            <a href="{% url 'merop_kon_obuch' %}"><il>Конкурсные</il></a>
+            <a href="{% url 'merop_ne_kon_obuch' %}"><il>Не конкурсные</il></a>
+        </ul>
+        <p>Здесь будет список мероприятий "Конкурсные"</p>
+    </div>
+{% endblock %}

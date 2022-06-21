@@ -1,0 +1,14 @@
+{% extends 'obuch/obuch_home.html' %}
+
+{% block title %}Программы{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Программы</h1>
+        <ul>
+            <a href="{% url 'program_det_obuch' %}"><il>Детский университет</il></a>
+            <a href="{% url 'program_mal_obuch' %}"><il>Малая академия</il></a>
+            <a href="{% url 'program_set_obuch' %}"><il>Сетевые уроки</il></a>
+        </ul>
+    </div>
+{% endblock %}

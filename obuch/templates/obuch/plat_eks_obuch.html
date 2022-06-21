@@ -1,0 +1,16 @@
+{% extends 'obuch/obuch_home.html' %}
+
+{% block title %}Экскурсии и мастер классы{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Экскурсии и мастер классы</h1>
+        <ul>
+            <a href="{% url 'plat_prog_obuch' %}"><il>Программы</il></a>
+            <a href="{% url 'plat_mer_obuch' %}"><il>Мероприятия выходного дня</il></a>
+            <a href="{% url 'plat_fab_obuch' %}"><il>Фабрика-лаборатория</il></a>
+            <a href="{% url 'plat_eks_obuch' %}"><il>Экскурсии и мастер классы</il></a>
+        </ul>
+        <p>Здесь будет Описание и Расписание "Экскурсии и мастер классы"</p>
+    </div>
+{% endblock %}
